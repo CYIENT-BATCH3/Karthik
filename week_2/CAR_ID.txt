@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j,k,l,m,n,o,p;
+    char b[10],id;
+    printf("enter the production plant ID:");
+    scanf("%c",&id);
+   
+    if (id == 'E')
+    {
+         k=109186;
+    for (l=0;l<=20;l++)
+    {   
+       
+        printf("1ECBH41JXMN%d\n",k);
+        k++;
+    }
+    }
+    else if (id == 'H')
+    {
+         n=109186;
+    for (m=0;m<=20;m++)
+    {   
+        printf("1HYBH41JXMN%d\n",n);
+        n++;
+    }
+    }
+    else if ( id == 'P') 
+    {
+     p=109186;    
+    for (o=0;o<=20;o++)
+    {   
+        printf("1PUBH41JXMN%d\n",p);
+        p++;
+    }
+    }
+    else
+    {
+        printf("invalid given ID");
+    }
+
+    return 0;
+}

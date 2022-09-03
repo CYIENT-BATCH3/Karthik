@@ -1,0 +1,35 @@
+#include <stdio.h>
+void music(int a)   //function declaretion
+{
+    if (a == 1)  //checking wheather the given value is 1
+    {
+      printf("song is playing"); //printing the output to user
+    }
+    else if (a == 2)    //checking wheather the given value is 2
+    {
+        printf("song is stoped");   //printing the output to user
+    }
+    else if ( a == 3)   //checking wheather the given value is 3
+    {
+        printf("song is paused");   //printing the output to user
+    }
+    else if ( a == 4)   //checking wheather the given value is 4
+    {
+        printf("the currently playing song is tamil songs");    //printing the output to user
+    }
+    else if (a == 5)    //checking wheather the given value is 5
+    {
+        printf("list of songs :");  //printing the output to user
+    }
+    else        
+    {
+        printf("entered number %d is invalid number",a);  //printing the output to user
+    }
+}
+void main()     //mainfunction
+{
+    int a;      //variable
+    printf("enter number :");   //getting the value from user 
+    scanf("%d",&a);             //reading the value from user
+    music(a);       //function call 
+}

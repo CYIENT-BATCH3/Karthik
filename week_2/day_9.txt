@@ -1,0 +1,33 @@
+program: 1
+
+#include<stdio.h>
+int main()
+{
+    int arr[20],n,i;      //variable declaration
+    printf("enter the number");   //getting the value from user
+    scanf("%d",&n);             //reading the value given by user
+    for (i=0;i<=n;i++)         
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("%d",n);
+    for(i=0;i<=n;i++)
+    {
+        printf("\n%d",arr[i]);
+    }
+program :2
+
+int main()
+{
+    int arr[20],n,i,sum=0,count=0;
+    printf("enter the number");
+    scanf("%d",&n);
+    //count= sum;
+    for (i=0;i<=n;i++)
+    {
+        sum = n + i;
+    }
+    count =sum;
+    printf("%d",count);
+    return 0;
+}

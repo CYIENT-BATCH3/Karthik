@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+void add(int a,int b)   //function declaration
+{
+     int sum;       //variable declaration
+     sum = a + b;       // formula for addition
+     printf("\nadd = %d",sum);      //printing output to user
+}
+void sub(int a, int b)   //function declaration
+{
+    int sum1;       //variable declaration
+    sum1 = a - b;       // formula for sub
+    printf("\nsub = %d",sum1);  //printing output to user
+}
+void mul(int a,int b)    //function declaration
+{
+    int sum2;   //variable declaration
+    sum2 = a * b;       // formula for multiplication
+    printf("\nmul = %d",sum2);  //printing output to user
+}
+void div(int a,int b)    //function declaration
+{
+    int sum3;    //variable declaration
+    sum3 =a/b;  // formula for division
+    printf("\ndiv = %d",sum3); //printing output to user
+}
+void main()   //main fuction
+{
+    int a,b;  //variable declaration
+    printf("enter the number");  //getting value from user
+    scanf("%d %d",&a,&b);    //reading input
+    add(a,b);  //function call 
+    sub(a,b);  //function call
+    mul(a,b);  //function call
+    div(a,b);   //function call
+}

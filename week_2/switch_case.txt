@@ -1,0 +1,27 @@
+
+#include <stdio.h>  
+int main()
+{
+  float num1=2.4,num2=4.6,sum;
+  char select;
+  
+  scanf("%c",&select);
+  switch (select)
+  {
+      case '+':
+      sum = num1+num2;
+      printf("%f",sum );
+      break;
+      case '-':
+      sum =num1-num2;
+      printf("%f", sum);
+      break;
+      case '*':
+      sum=num1*num2;
+      printf("%f", sum);
+      break;
+      default:
+      printf("invalid");
+  }
+      return 0;
+}

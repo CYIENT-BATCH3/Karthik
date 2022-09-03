@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+
+int main()
+{
+   char ch[20];              
+   char ch2[20];
+   gets ch[20];
+   puts ch[20];
+   if (ch1[10]== 'E')
+   {
+       printf("electronic city");
+   }
+   else if (ch1[10]== 'H')
+   {
+       printf("hyderabad");
+   }
+   else if (ch1[10]== 'p')
+   {
+       printf("pune");
+   }
+   else
+   {
+       printf("the given value is wrong");
+   }
+   return 0;
+}
