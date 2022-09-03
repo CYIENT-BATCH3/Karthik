@@ -1,0 +1,32 @@
+q:1
+#include <stdio.h>
+
+int main()
+{
+    int no1;
+    char no2,b,c[10];
+    float no3;
+    long int no4;
+    printf("enter value:");
+    scanf("\n%d",&no1);
+    printf("enter value:");
+    scanf("\n%c",&no2);
+    printf("enter value:");
+    scanf("\n%f",&no3);
+    printf("enter value:");
+    scanf("\n%li",&no4);
+    printf("integer value: %d,\nchar: %c, \nfloat value: %f, \nlong integer value: %li",no1,no2,no3,no4);
+ 
+}
+q:2
+#include <stdio.h>
+const pi = 3.141;
+int main()
+{
+    float area, radius;
+    printf("enter:");
+    scanf("%f",&radius);
+    area= pi *radius*radius;
+    printf("the area to be covered is %4f",area);
+    return 0;
+}
