@@ -1,0 +1,54 @@
+q.no:4
+    int A;  
+    char B;
+    float C;
+    long int D;
+    constant int E;
+    printf("enter :");
+    scanf("%d %c %f %ld",&A,&B,&C,&D);
+    printf("\nint value = %d",A);
+    printf("\nchar value = %c",B);
+    printf("\nfloat value = %f",C);
+    printf("\nlong int value = %ld",D);
+    printf("\nconstant int value = %d", E);
+q.no: 6
+    int decimal, octal, hexadecimal ;
+    printf("enter the decimal numbers");
+    scanf("%d",&decimal);
+    printf("enter the octal numbers");
+    scanf("%o",&octal);
+    printf("enter the hex numbers");
+    scanf("%x",&hexadecimal);
+    printf("decimal : %d, octal : %o , hexadecimal : %x ",decimal, octal, hexadecimal );
+   
+
+   
+q.no; 8
+    int A, B, C, D, E, sum1;
+    char C1, C2, C3;
+    float F1, F2, F3, F4, sum2, sum3;
+    printf("enter the integer value :");
+    scanf ("%d %d %d %d %d", &A, &B, &C, &D, &E);
+    printf("enter the char value :");
+    scanf ("%C %C %C", &F1, &F2, &F3, &F4);
+    printf("enter the float value :");
+    scanf ("%F %F %F %F", &F1, &F2, &F3, &F4);
+p:
+In this program we gave three types of data type in that we decleared 8 integer variable,
+three character and 6 float  variable     
+    
+q.no 1,2,3
+    int A, B, C, D, E, sum1;
+    float F1, F2, F3, F4, sum2, sum3;
+    printf("enter the integer value :");
+    scanf ("%d %d %d %d %d", &A, &B, &C, &D, &E);
+    printf("enter the float value :");
+    scanf ("%F %F %F %F", &F1, &F2, &F3, &F4);
+    sum1 = A + B + C + D + E;
+    printf("\nsum of int %d",sum1);
+    sum2 = F1 + F2 + F3 + F4;
+    printf("\nsum of float %f",sum2);
+    sum3 = sum1 / sum2;
+    printf("\nsum of both number %f", sum3);
+    return 0;
+}

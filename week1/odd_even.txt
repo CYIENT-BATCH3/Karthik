@@ -1,0 +1,15 @@
+odd and even:
+#include <stdio.h>
+
+int main()
+{
+  int num1,num2,num3,num4,num5;
+  printf("enter the number:");
+  scanf("%d %d %d %d %d",&num1,&num2,&num3,&num4,&num5);
+  (num1% 2 && 1)?printf("\ngiven ball is odd"):printf("\ngiven ball is even");
+  (num2%2 && 1)?printf("\ngiven ball is odd"):printf("\ngiven ball is even"); 
+  (num3%2 && 1)?printf("\ngiven ball is odd"):printf("\ngiven ball is even"); 
+  (num4%2 && 1)?printf("\ngiven ball is odd"):printf("\ngiven ball iseven"); 
+  (num5%2 && 1)?printf("\ngiven ball is odd"):printf("\ngiven ball is even");
+  return 0;
+}

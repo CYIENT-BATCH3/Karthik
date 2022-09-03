@@ -1,0 +1,19 @@
+#include <stdio.h>  //including header file
+
+int main()
+{
+    int a,b;         //variable declaration
+    printf("enter :");       //getting intput
+    scanf ("%d %d",&a,&b);      //reading the input
+    if(a>b)             
+    {
+        printf("%d is greater than %d",a,b);
+    }
+    else
+    {
+        printf("%d is less than %d",a,b); 
+    }
+    
+
+    return 0;
+}
