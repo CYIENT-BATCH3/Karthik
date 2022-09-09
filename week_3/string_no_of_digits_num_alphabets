@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+char main() //main function
+{
+    char word[20];   //variable declaration
+    int i=0;    //variable declaration 
+    printf("enter :");  //getting the value from user
+    scanf("%s",word);   //reading tha value
+    int count =0,number = 0,special = 0;   //variable declaration
+    while(word[i] != '\0')  //loop condition
+    {
+    if ((word[i] >= 'a') && (word[i] <= 'z') || (word[i] >= 'A') && (word[i] <= 'Z') )   //condition for checking a to z and A and Z
+    {
+    count++;   //post increment
+    }
+    else if ((word[i] >= '0') && (word[i] <= '9'))  //condition checking 0 to 9
+    {
+       number++;   //post increment
+    }
+    else   
+    {
+        special++;  //post increment
+    }
+    i++;  //post increment
+    }
+    printf("no of alphabets : %d\n",count);    //pring the output to user  for a to z and A and Z
+    printf("no of digits : %d\n",number);      //pring the output to user  for 0 to 9
+    printf("no of special characters : %d\n",special);    //pring the output to user  
+    return 0;
+}
