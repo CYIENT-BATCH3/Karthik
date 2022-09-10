@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+#define pi 3.142	//defining value
+int main()
+{
+	setbuf(stdout,NULL);	
+	int radius=0,height=0,aci,aco,acy;	//variable declaration
+	printf("enter the number :");	//getting the input from user
+	scanf("%d %d",&radius,&height);  //reading the input from user
+	aci = pi * radius * radius;  //formula
+	aco = pi * radius * (radius*sqrt(height*height+radius*radius));	//formula
+	acy = 2*pi * radius *height + 2*pi * radius * radius;	//formula
+	printf("\narea of circle  : %d ",aci);	//printing the output
+	printf("\narea of cone  : %d ",aco);	//printing the output
+	printf("\narea of cylinder  : %d ",acy);	//printing the output
+	return 0;
+}
