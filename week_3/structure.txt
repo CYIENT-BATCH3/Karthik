@@ -1,0 +1,19 @@
+#include <stdio.h>
+struct emp
+{
+    int id_no;    //structure variable declaration
+    char name[20];  //structure variable declaration
+    float salary;   //structure variable declaration
+};
+int main()     //main function
+{
+    struct emp detail;   //structure variabl declaration
+    printf("enter name :"); 	//getting input from user
+    scanf("%s",detail.name);	//reading the given input
+     printf("enter id number :");	//getting input from user
+    scanf("%d",&detail.id_no);	//reading the given input
+     printf("enter salary :");	//getting input from user
+    scanf("%f",&detail.salary);	//reading the given input
+     printf("\nenter name : %s \nenter id number :%d \nenter salary : %.3f ",detail.name,detail.id_no,detail.salary);
+    return 0;
+}

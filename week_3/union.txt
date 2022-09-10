@@ -1,0 +1,14 @@
+#include <stdio.h>
+union a
+{
+    int num1,num2;	//variable declaration 
+};
+void main()	//main function
+{
+union a b;	//union variable declaration
+printf("enter : ");	//getting the input from user
+scanf("%f",&b.num2);	//reading the given input
+printf("enter : ");	//getting the input from user
+scanf("%d",&b.num1);	//reading the given input
+printf("\nnumber1 = %f \nnumber2 = %d",b.num2,b.num1);
+}

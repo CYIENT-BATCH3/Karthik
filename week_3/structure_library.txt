@@ -1,0 +1,24 @@
+#include<stdio.h>
+struct library
+{
+ int id; 		// variable declaration
+ char name[40];		//variable declaration
+ char subject[40]; 	//variable declaration
+ char author[40]; 	//variable declaration
+};
+int main()
+{
+    struct library book;  	//structure variable declaration
+    struct library *book1;		//structure pointer variable declaration
+    book1= &book;
+    printf("enter book name to store :");
+    scanf("%s",&book1->name);  //reading the given input
+    printf("enter book ID or number to store :");
+    scanf("%d",&book1->id);	//reading the given input
+    printf("enter book subjuct :");
+    scanf("%s",&book1->subject);	//reading the given input
+    printf("enter author name :");
+    scanf("%s",&book1->author);	//reading the given input
+    printf("book name : %s \nbook ID or number : %d \nsubject : %s \nauthor : %s",book1->name,book1->id,book1->subject,book1->author);
+    return 0;
+}

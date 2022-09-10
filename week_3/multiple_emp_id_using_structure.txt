@@ -1,0 +1,38 @@
+#include <stdio.h>
+struct emp		
+{
+    int id_no;		//structure variable declaration
+    long int phone; 	//structure variable declaration
+    char name[20];	//structure variable declaration
+    float salary;	//structure variable declaration
+};
+int main()	//main function
+{
+    struct emp detail[10];
+    int num;		//variable declaration
+    printf("\nenter number of emp :");	//getting the input from user
+    scanf("%d",&num);	//reading the given value 
+    if (num <= 10)	//condition checking
+    {
+    for (int i=0;i<num;i++)	//loop
+    {
+    printf("enter name :");	//getting the input from user
+    scanf("%s",&detail[i].name);  //reading the given value 
+    printf("enter phone number :");  //getting the input from user
+    scanf("%ld",&detail[i].phone);	//reading the given value 
+    printf("enter id number :");	//getting the input from user
+    scanf("%d",&detail[i].id_no);	//reading the given value 
+    printf("enter salary :");	//getting the input from user
+    scanf("%f",&detail[i].salary);	//reading the given value 
+    }
+    for (int j=0;j<num;j++)	//loop
+    {
+         printf("\nEMP name : %s \nEMP mobile number :%ld \nEMP id number :%d \nEMP salary : %f \n",detail[j].name,detail[j].phone,detail[j].id_no,detail[j].salary);  //printing output
+    }
+    }
+    else
+    {
+        printf("invalid  given number %d  is less than   or more than 10",num);
+    }
+    return 0;
+}
