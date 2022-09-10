@@ -1,0 +1,74 @@
+pointer:
+#include <stdio.h>
+void main()  //main function
+{
+    int *p,num1;    //variable declaration
+    int *q,num2;     //variable declaration
+    printf("enter the number :");     //getting the inpt from user
+    scanf("%d %d",&num1,&num2);
+    p = &num1;       //storing the address in pointer variable
+    q= &num2;        //storing the address in pointer variable
+    printf("given number 1 = %d \n",*p);       //printing the output to user
+    printf("given number 2 = %d \n",*q);       //printing the output to user
+    printf("addition of given number  = %d \n",*p + *q);         //printing the output to user
+    printf("sub of given number  = %d \n",*p - *q);              //printing the output to user
+    printf("increment of given number  = %d %d\n",++*p,++*q);      //printing the output to user
+}
+
+
+
+
+
+
+swap:
+#include <stdio.h>
+void swap(int *p, int *q)   //function declaration
+{
+    int temp;    //variable declaration
+    temp = num1;      //swap formula
+    num1 = num2;      //swap formula
+    num2 = temp;      //swap formula
+    
+    printf("number 1 : %d \nnumber 2 : %d",*p,*q);      //printing the output to user
+}
+void main()
+{
+    int num1,num2;     //variable declaration
+    int *p,*q;     //pointer variable declaration
+    printf("enter :");       //getting the inpt from user
+    scanf("%d %d",&num1,&num2);   //reading the given input
+    p = &num1;    //storing the address in pointer variable
+    q = &num2;     //storing the address in pointer variable
+    swap(&num1,&num2);   //function call      
+}
+
+
+
+
+
+pointer using functions:
+
+#include <stdio.h>      //including header file
+int rem(int *p,int *q)     //function declaration
+{
+    int sum1;    //variable declaration
+    sum1 = *p % *q;     /formula 
+    return sum1;    //returing the value 
+}
+int  que(int *p,int *q)    //function declaration
+{
+    int sum2;    //variable declaration
+    sum2 = *p / *q;     //formula
+    return sum2;     //returing the value
+}
+int  main()///main function
+{
+    int a,b,sum3,sum4;     //variable declaration
+    printf("enter :");         //getting the inpt from user
+    scanf("%d %d",&a,&b);       //reading the given input
+    sum3 = rem(&a,&b);    //function call
+    sum4 = que(&a,&b);     //function call
+    printf("remainder = %d",sum3);         //printing the output to user
+    printf("\nquotient = %d",sum4);          //printing the output to user
+    return 0;
+}
