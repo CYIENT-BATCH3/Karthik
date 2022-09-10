@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    // declaring and assigning pointer
+    int *p=NULL;
+    //print pointer address
+    printf("%d\n",p);
+    printf("%p",p);
+
+    return 0;
+}

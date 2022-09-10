@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+   int num;  //variable declaration
+   int *p1;	//pointer variable declaration
+   int **p2;	//double pointer variable declaration
+   int ***p3;	//trible pointer variable declaration
+   printf("enter the value :");   //getting the value from user
+   scanf("%d",&num);  //reading the input
+   p1=&num;   //assigning integer variable address to  pointer
+   p2=&p1;	//assigning integer variable address to  pointer
+   p3=&p2;	//assigning integer variable address to  pointer
+   printf("p1 = %d\n",*p1);
+   printf("p1 = %d\n",p1);
+   printf("p2 = %d\n",**p2);
+   printf("p2 = %d\n",*p2);
+   printf("p2 = %d\n",p2);
+   printf("p3 = %d\n",***p3);
+   printf("p2 = %d\n",**p3);
+   printf("p3 = %d\n",*p3);
+   printf("p2 = %d\n",p3);
+   return 0;
+}
