@@ -1,0 +1,27 @@
+#include <stdio.h>      //including header file
+struct student          //structure name
+{
+    int id;             //variable declaration
+    char name[20];      //variable declaration
+    float salary;       //variable declaration
+};
+struct student func(struct student st3);        //function declaration
+int main()          //main function
+{
+    struct student st1,st2;         //structure variable declaration
+    st1  = func(st2);               //function call
+    printf("\nname : %s",st1.name);     //printing output
+    printf("\nID number : %d",st1.id);   //printing output
+    printf("\nsalary : %f",st1.salary);  //printing output
+    return 0;
+}
+struct student func(struct student st3)         //function define
+{
+    printf("enter name : ");        //getting input from user
+    scanf("%s",st3.name);           //reading the given value
+    printf("enter ID : ");          //getting input from user
+    scanf("%d",&st3.id);            //reading the given value
+    printf("enter name : ");        //getting input from user
+    scanf("%f",&st3.salary);        //reading the given value
+    return st3;         //returning st3 to main function 
+}
