@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include <string.h>
+struct student
+{
+	int age;		//variable declaration
+	char name[10];		//variable declaration
+}s1;        //structure variable declaration
+void func1(struct student *p);      //function declaration
+void func2(struct student *p);      //function declaration
+int main()
+{
+	setbuf(stdout,NULL);
+	struct student *p;    //declaration of pointer struct
+	p=&s1;
+	strcpy(p->name,"karthik");  //assigning  value 
+	p->age = 23;     //assigning  value
+	func1(p);   //function call
+	func2(p);   //function call
+	return 1;  
+}
+void func1(struct student *p)     //function define
+{
+	printf("\n%s",p->name);       //printing output
+}
+void func2(struct student *p)        //function define
+{
+	printf("\n%d",p->age);         //printing output
+}
