@@ -1,0 +1,108 @@
+#include<stdio.h>
+static int m=0;// global variable declaration
+static int d=0;//global variable declaration
+int sample1(int *f_p_data) //function declaration
+{
+                                        int count=0,threshold=0x55;//declaring variables
+for(int i=0;i<d;i++)    //loop
+{
+                                        if(f_p_data[i]>threshold)//checking f_p_data greater than threshold
+                                        {
+
+                                             count++;   //post increment
+                                            if(count==5)    //condition checking
+                                             {
+                                             break;//break from loop
+                                            }
+
+                                        }
+    else
+        count=0;
+    }
+return count;//returning count
+}
+
+int main()      //main condition
+{
+                                        int sample2=0;//declaring variable
+                                        setbuf(stdout,NULL);
+                                        int pr[50],pl[50],pc[50],f_p_data[50];      //declaratin of array of integer
+                                           for(int i=0;i<50;i++)    //loop
+                                                    {
+                                                    pc[i]=i+0x45;
+                                                    }
+                                        printf("\nPressure sensor center\n");       //printing output
+                                        printf("\nPC time stamp       PC data\n");      //printing output
+             for(int i=0;i<=49;i++)         //loop
+                 {
+                                        printf("\n%d                   %x\n",i,pc[i]);          //printing output
+                 }
+                                        for(int i=0;i<50;i++)
+                                                    {
+                                                    pr[i]=i+0x55;
+                                                    }
+                                        printf("\nPressure sensor right\n");            //printing output
+                                        printf("\nPR time stamp       PR data\n");          //printing output
+    for(int i=0;i<50;i++)       //ioop
+        {
+                                        printf("\n%d                   %x\n",i,pr[i]);     //printing output
+        }
+    for(int i=0;i<=49;i++)      //loop
+                                                    {
+                                                    pl[i]=i+0x55;
+                                                    }
+                                        printf("\nPressure sensor left\n");     //printing output
+                                         printf("\nPL time stamp       PL data\n");     //printing output
+       for(int i=0;i<=49;i++)       //loop
+           {
+                                        printf("\n%d                   %x\n",i,pl[i]);     //printing output
+           }
+          int less=0x05,more=0xF5;//variable declaration
+             int i=0,j=0;//variable declaration
+                                         while(m<50)//loop
+                                          {
+                                           for(i=m;i<50;i=i+5)       //loop
+                                              {
+                                                                             if((pr[i]>less)&&(pr[i]<more))     //condition
+                                                                     {
+
+                                                          f_p_data[d]=pr[i];//storing pr[i] in f_p_data
+
+                                                                break;//break from the loop
+                                                                    }
+                                              }
+                                             for(j=i+5;j<50;j=j+5)      //loop
+                                              {
+                                                                             if((pc[j]>less)&&(pc[j]<more))//condition
+                                                                {
+                                                                          f_p_data[d]=pc[j];        //storing pc[j] in f_p_data
+
+                                                                      break;//break from the loop
+                                                                 }
+                                               }
+                                             for(m=j+5;m<50;m=m+5)      //loop
+                                              {
+                                                              if((pl[m]>less)&&(pl[m]<more))//condition checking
+                                                               {
+
+                                                                              f_p_data[d]=pl[m];        //storing pl[m] in f_p_data
+
+                                                                                break;//break from the loop
+                                                               }
+                                                                            }
+                                             d++;//post increment
+                                         }
+                                          printf("\nf_p_data            data\n");       //printing output
+              for(int i=0;i<d;i++)  //loop
+              {
+
+                                        printf("\n%d                     %x\n",i,f_p_data[i]);    //output
+                                             }
+sample2=sample1(&f_p_data);     //function call
+if(sample2==5)  //condition
+                                        {
+                                       printf("\n**************************AIR BAG IS OPEN******************************");      //printing output
+                                        }
+else
+                                        printf("\n*************************NO NEED OF AIR BAG************");      //printing output
+}
