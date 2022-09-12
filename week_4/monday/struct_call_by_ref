@@ -1,0 +1,23 @@
+#include <stdio.h>          //including header file
+
+struct employee       //structure name
+{
+	int id;             //variable declaration
+	char name[10];      //variable declaration
+	float salary;          //variable declaration
+};
+void details(struct employee *s);       //declaring function
+int main()          //main function
+{
+	setbuf(stdout,NULL);
+	struct employee *s;       //structure pointer variable declaration
+	s->id=23;                //assigning value 
+	strcpy(s->name,"karthik");   //assigning value 
+	s->salary=12524.33;                 //assigning value 
+	details(&s);                //function call
+	return 0;
+}
+void details(struct employee *s)        //function define
+{
+	printf("%d %s %f",s->id,s->name,s->salary);   //printing output to user
+}
