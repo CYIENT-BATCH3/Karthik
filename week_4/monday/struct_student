@@ -1,0 +1,25 @@
+#include<stdio.h>
+struct student   
+{
+	int age;		//variable declaration
+	char name[10];		//variable declaration
+}s1;
+void details(struct student s1)		//function declaration
+{
+	printf("\n%s",s1.name);		//printing output
+}
+void details1(struct student s1)	//function declaration
+{
+	printf("%d",s1.age);		//printing output
+}
+int main()	//main function
+{
+	setbuf(stdout,NULL);
+	printf("enter name : ");		//getting the input from user
+	scanf("%s",s1.name);			//reading th given value
+	printf("enter age ");			//getting the input from user
+	scanf("%d",&s1.age);			//reading th given value
+	details(s1);			//function call
+	details1(s1);			//function call
+	return 0;
+}
