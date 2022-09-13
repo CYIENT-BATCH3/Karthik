@@ -1,0 +1,57 @@
+#include <stdio.h>
+struct numbers//declaring structure
+{
+    int num1;//declaring variable
+    float num2;//declaring variable
+    float add,diff;//declaring float data type
+    
+}s1;
+    void function(struct numbers *a);//functiontion prototype 
+    int main()
+{
+    printf("enter two numbers");
+    scanf("%d %f",&s1.num1,&s1.num2);//reading  inputs
+    func(&n);//calling the function using pass by value   method
+   
+    printf("\nsum of two numbers = %f",s1.add);//finding sum of two variables
+    printf("\ndifference of two numbers = %f",s1.diff);//finding difference of two variables
+    return 0;
+    struct number//structure declaration
+{
+    int num1;//variable declaration
+    int num2;//variable declaration
+    int  add,sub;//variable declaration
+    
+}s1;
+   struct number func(struct number s1);//functiont declaration 
+   struct number func1(struct number s1);//functiont declaration 
+    int main()
+{
+    printf("enter two numbers");            //getting input from user
+    scanf("%d %d",&s1.num1,&s1.num2);       //reading  inputs
+    s1=func(s1);                               //function call pass by value 
+    s1=func1(s1);
+    printf("\nsum of two numbers = %d",s1.add);         //printing output 
+    printf("\ndifference of two numbers = %d",s1.sub);     //printing output 
+    return 0;
+    
+} 
+struct number func(struct number s1 )//defining function
+{
+    s1.add=s1.num1+s1.num2;//finding sum
+    return s1;       //returning s1 to function call
+}
+struct number func1(struct number s1)//defining function
+{
+    s1.sub=s1.num1-s1.num2;//finding sum
+    return s1;      //returning s1 to function call
+}
+
+} 
+void function(struct numbers *a)//defining function
+{
+    a->add=a->num1+a->num2;//finding sum
+    a->sub=a->num1-a->num2;//finding difference
+
+    
+}
