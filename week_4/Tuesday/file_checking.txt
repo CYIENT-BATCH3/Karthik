@@ -1,0 +1,27 @@
+#include<stdio.h> //including file
+#include<stdlib.h>//including file
+int main()   //main function
+{
+	setbuf(stdout,NULL);
+char ch;//variable declaration
+FILE *fp=fopen("program1.txt","r");//declaring file
+ch=fgetc(fp);//assigning character from file
+if(fp==NULL)//checking the value of pointer
+{
+printf("file not found");
+exit(1);		//ending 
+}
+
+do{
+	if(ch != '*')  //checking if the character is not *
+	{
+		printf("%c",ch);//printning output
+	ch=fgetc(fp);//assigning character for file
+	}
+	else
+		break;
+
+}while(ch!=EOF);
+fclose(fp);//closing the file
+
+}
