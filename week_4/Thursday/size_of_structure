@@ -1,0 +1,16 @@
+#include<stdio.h>		//including header file
+#pragma pack(1)			//freeing memory
+struct name
+{
+	int a;			//variable declaration
+	float b;		//variable declaration
+	char c;			//variable declaration
+}s1;			//structure variable
+int main()
+{
+	printf("\na : %d",sizeof(s1.a));		//printing output
+	printf("\nb : %d",sizeof(s1.b));		//printing output
+	printf("\nc : %d",sizeof(s1.c));		//printing output
+	printf("\ns1 : %d",sizeof(s1));			//printing output
+	return 0;
+}
