@@ -1,0 +1,14 @@
+#include <iostream>		//including header file
+using namespace std;
+int main()			//main function
+{
+	int num=0,range;	//variable declaration
+	cout <<"enter range : " <<endl;	//printing user to enter input
+	cin>>range;		//reading the given input
+	do
+	{
+	 num++;
+	 cout<<num<<endl;
+	}while(num < range);	//loop
+	return 0;
+}

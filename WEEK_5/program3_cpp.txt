@@ -1,0 +1,13 @@
+#include <iostream>		//including header file
+using namespace std;
+int main()			//main function
+{
+	int fact=1,range;	//variable declaration
+	cout <<"enter range : " <<endl;	//printing user to enter input
+	cin>>range;	//reading the given value
+	for(int i=1;i<=range;i++)		//loop
+	{
+		fact = fact*i;
+	}
+	cout<<"fact : "<<fact<<endl;		//printing output
+}

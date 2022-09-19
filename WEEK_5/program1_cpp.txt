@@ -1,0 +1,18 @@
+#include <iostream>		//including header file
+using namespace std;		
+int main()			//main function
+{
+	int num,rem,sum=0;	//variable declaration
+	cout <<"enter number : " <<endl;	//printing user to enter input
+	cin>>num;		//reading th given value
+	while(num)		//loop
+	{
+		rem = num % 10;
+		sum = sum+rem;
+		num = num/10;
+	}
+
+	cout<<"sum of given number : "<<sum<<endl;	//printing output to user
+	return 0;
+}
+

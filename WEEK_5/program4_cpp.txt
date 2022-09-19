@@ -1,0 +1,16 @@
+#include <iostream>	//including hader file
+using namespace std;
+int main()		//main function
+{
+	char ch;		//variable declaration
+	cout <<"enter word : " <<endl;	//printing user to enter input
+	cin>>ch;		//reading given value
+	if(ch & ('a'||'e'||'i'||'o'||'u'))	//condition checking
+	{
+		cout<<"given word is owel"<<endl;	//printing output
+	}
+	else
+	{
+		cout<<"given word is not owel"<<endl;	//printing output
+	}
+}
