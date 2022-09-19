@@ -1,0 +1,53 @@
+//write a c program to input elements in array and search an element in array using pointers
+
+/*
+1.start
+2.declaring variable to get array elements
+3.searching element in array
+4.printing its position
+*/
+
+#include<stdio.h>//including header file
+int position(int *arr,int range,int num)//function define
+{
+    int count = 0;
+
+  for(int i=0;i<=range;i++)
+     {
+        if( *(arr+i) == num )				//condition checking
+        {
+            count = 1;
+        	return i;						//returning j value to main
+        }
+
+     }
+     if( count == 0)						//condition checking
+     {
+         return count;						//return 0 if it is not found in array
+     }
+}
+int main()									//main function
+{
+  setbuf(stdout,NULL);
+  int range,num,position1,arr[range];		//variable declaration
+  printf("enter the range of the array : ");	//printing user to give input
+  scanf("%d",&range);						//reading the given value
+  printf("\n enter array of elements : ");		//printing user to give input
+  for(int i=0;i<range;i++)					//loop
+  {
+	  scanf("%d",&arr[i]);					//reading the given value
+  }
+
+  printf("\n enter element to search : ");	//printing user to give input
+  scanf("%d",&num);							//reading element to search
+  position1=position(arr,range,num);		//calling function
+  if( num == 0 )							//condition checking
+   {
+
+      printf("\n given number %d not found.",num);//if condition false printing  is not found
+  }
+  else
+  {
+     printf("\n given number %d is found at array in %d position.",num,position1);//if condition false printing given num is found
+  }
+}
