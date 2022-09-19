@@ -1,0 +1,16 @@
+/*WAP to finding square of an number using Macros
+
+1.start
+2.define macro for finding square
+3.printing the result
+*/
+#include <stdio.h>					//including header file
+#define square(value) (value*value)//defining macro
+int main()							//main function
+{
+    int value;						//variable declaration
+    printf("enter a number\n");
+    scanf("%d",&value);				//reading the given number
+    printf("\n the square of given number : %d",square(value));//printning the square
+    return 0;
+}
