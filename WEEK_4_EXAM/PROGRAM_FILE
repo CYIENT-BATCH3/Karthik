@@ -1,0 +1,20 @@
+/*WAP file contents and display on console
+1.start
+2.using file pointer read the contents of the file
+3.print the content on the console
+*/
+#include<stdio.h>//including header file
+int main()
+{
+setbuf(stdout,NULL);//for printing the output in the console
+char ch;//variable declaration
+FILE *p=fopen("program.txt","r");//declaring file pointer and opening the current folder file and reading 
+ch=fgetc(p);//reading the contents in that file
+do{
+putchar(ch);  //printning the character
+	ch=fgetc(p);   //reading the next character
+
+}while(ch!=EOF);//iterates upto EOF
+fclose(p);//closing file
+
+}
