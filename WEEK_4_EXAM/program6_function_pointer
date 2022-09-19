@@ -1,0 +1,31 @@
+//write a c program using function pointers 1)add function 2)sub function
+/*
+
+1.start
+2.declaring two  variables
+3.call the functions using pointer
+4.printing output
+*/
+#include <stdio.h>    //including header file
+void add(int *a,int *b)   //function declaration
+{
+     int sum;       //variable declaration
+     sum = *a + *b;       // formula for addition
+     printf("\nadd = %d",sum);      //printing output to user
+}
+void sub(int *a, int *b)   //function declaration
+{
+    int sum1;       //variable declaration
+    sum1 = *a - *b;       // formula for sub
+    printf("\nsub = %d",sum1);  //printing output to user
+}
+int main()   //main fuction
+{
+	setbuf(stdout,NULL);
+    int a,b;  //variable declaration
+    printf("enter the number");  //getting value from user
+    scanf("%d %d",&a,&b);    //reading input
+    add(&a,&b);  //function call
+    sub(&a,&b);  //function call
+    return 0;
+}
