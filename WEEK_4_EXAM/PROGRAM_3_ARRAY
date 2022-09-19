@@ -1,0 +1,80 @@
+/*program to  input elements in an array in array and sort array in descending or Ascending order
+
+1.start
+2.read array size  & array elements
+3.sort array in Descending order and Ascending order
+4.print the array after sorting
+ */
+/*
+output :
+enter the size of the array
+5
+
+enter array elements
+1 2 3 4 1
+
+given array : 1 2 3 4 1
+Array sorted in Ascending order : 1 1 2 3 4
+Array sorted in Descending order : 4 3 2 1 1
+ */
+#include<stdio.h>			//including header file
+int main()					//main function
+{
+  setbuf(stdout,NULL);
+  int range;					//declaring variable
+  printf("enter the range of the array\n");		//printing user to enter input
+  scanf("%d",&range);					//reading given value
+  int arr[range];//declaring integer array containing range elements
+  printf("\n enter array of  elements\n");		//printing user to enter input
+  for(int i=0;i<range;i++)
+  {
+	  scanf("%d",&arr[i]);              //reading array elements
+  }
+  printf("\ngiven array : ");			//printing the given values
+  for(int i=0;i<range;i++)				//loop
+    {
+  	  printf("%d ",arr[i]);			//printing output one by one
+    }
+	 for(int i=0;i<range-1;i++)			//loop
+	 {
+		 for(int j=0;j<range-i-1;j++)		//loop
+		 {
+			 if(arr[j]>arr[j+1])//condition for ascending order
+			 {
+				 //swaping elements if the condition is true
+				 int temp;       //declaring new variable
+				 temp=arr[j];		//swap formula
+				 arr[j]=arr[j+1];
+				 arr[j+1]=temp;
+
+			 }
+		 }
+
+	 }
+	 printf("\nArray sorted in Ascending order : ");		//printing  Ascending order
+	 for(int i=0;i<range;i++)					//loop
+	     {
+	   	  printf("%d ",arr[i]);				//printing output one by one g
+	     }
+
+	 for(int i=0;i<range-1;i++)				//loop
+		 {
+			 for(int j=0;j<range-i-1;j++)		//loop
+			 {
+				 if(arr[j]<arr[j+1])		//condition for Descending order
+				 {
+					 int temp1;				//declaring new variable
+					 temp1=arr[j];			//swap formula
+					 arr[j]=arr[j+1];
+					 arr[j+1]=temp1;
+
+				 }
+			 }
+
+		 }
+		 printf("\nArray sorted in Descending order : ");				//printing Descending order
+		 for(int i=0;i<range;i++)				//loop
+		     {
+		   	  printf("%d ",arr[i]);//printing array after sorting
+		     }
+}
